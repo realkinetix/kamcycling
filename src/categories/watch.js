@@ -21,7 +21,7 @@ module.exports = function (Categories) {
 
 	Categories.getWatchState = async function (cids, uid) {
 		if (!(parseInt(uid, 10) > 0)) {
-			return cids.map(() => Categories.watchStates.notwatching);
+			return cids.map(() => Categories.watchStates.watching);
 		}
 		if (!Array.isArray(cids) || !cids.length) {
 			return [];
